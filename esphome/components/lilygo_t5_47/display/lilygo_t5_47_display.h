@@ -45,9 +45,10 @@ class LilygoT547Display : public PollingComponent, public display::DisplayBuffer
 #if ESPHOME_VERSION_CODE >= VERSION_CODE(2022,6,0)
   display::DisplayType get_display_type() override { return display::DisplayType::DISPLAY_TYPE_BINARY; }
 #endif
-
- protected:
-  void HOT draw_absolute_pixel_internal(int x, int y, Color color) override;
+  
+void HOT draw_absolute_pixel_internal(int x, int y, Color color) override;
+ 
+  protected:
 
  private:
   uint32_t full_update_every_;
